@@ -1,0 +1,31 @@
+#fruta=["fresa","mango", "manzana"]
+#numeros=[1,2,3,4,5,6,7,8]
+#mixto=["fresa",1,2,"manzana"]
+
+#fruta.append("banano")
+
+#print(fruta)
+
+#fruta.pop()
+
+#print(fruta)
+
+#fruta.pop(1)
+
+#print(fruta)
+
+#Hallar cuantos numeros pares hay en la lista, mostrar la cantida que hay
+#numeros=[45,25,-6,8,9,-6]
+#for i in numeros:
+#    if i %2==0
+#    contador=contador+1
+#    print (contador)
+
+#Hallar cuantos numeros pares hay en la lista, mostrar la cantida que hay
+numeros=[1,2,3,4,5,6,7,8,9]
+impares=[1,3,5,7,9]
+pares=[2,4,6,8]
+
+for i in numeros:
+    if i%2 !=0:
+        impares.append(i)
