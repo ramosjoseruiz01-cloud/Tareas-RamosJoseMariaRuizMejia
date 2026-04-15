@@ -1,0 +1,85 @@
+# Crear el arreglo con el tamaño indicado por el usuario
+tamano = 8
+arreglo = [0] * tamano 
+
+numero_base = 6
+
+def llenar_arreglo(arreglo, numero_base):
+    for i in range(len(arreglo)):
+        arreglo[i] = numero_base * (i + 1)
+
+llenar_arreglo(arreglo, numero_base)
+
+print("Contenido del arreglo:")
+print(arreglo)
+
+
+
+
+# Pedir el tamaño de los vectores
+#tamano = 4
+
+#nombres = ["Ana","Luis","Carlos","Marta"]
+#longitudes = [0] * tamano
+
+#for i in range(tamano):
+#    nombre = input(f"Ingrese el nombre {i+1}: ")
+#nombres[i] = nombre
+#longitudes[i] = len(nombre)
+
+#print("\nVector de nombres:")
+#print(nombres)
+
+#print("Vector de longitudes:")
+#print(longitudes)
+
+#opcion = int(input("Califique la atención (1-5): "))
+
+#if opcion == 5:
+#    print("Excelente")
+#elif opcion == 4:
+#    print("Muy Buena")
+#elif opcion == 3:
+#    print("Buena")
+#elif opcion == 2:
+#    print("Regular")
+#elif opcion == 1:
+#    print("Malo")
+#else:
+#    print("Opción inválida")
+    
+    
+    
+    
+    # Evaluaciones ya definidas (n clientes)
+evaluaciones = [5, 2, 4, 5, 3, 4, 5, 1, 2, 4, 5, 3, 4, 5, 2]
+
+n = len(evaluaciones)
+
+conteo = [0, 0, 0, 0, 0] 
+
+for nota in evaluaciones:
+    conteo[nota - 1] += 1
+
+print("Respuestas por tipo:")
+print("Excelente:", conteo[4]) # 5
+print("Muy Buena:", conteo[3]) # 4
+print("Buena:", conteo[2]) # 3
+print("Regular:", conteo[1]) # 2
+print("Malo:", conteo[0]) # 1
+
+mas_frecuente = conteo.index(max(conteo)) + 1
+print("\nMás frecuente:", mas_frecuente)
+
+promedio = sum(evaluaciones) / n
+print("Promedio:", round(promedio, 2))
+
+clientes_menor = []
+for i in range(n):
+    if evaluaciones[i] < promedio:
+        clientes_menor.append(i + 1)
+
+porcentaje = (len(clientes_menor) / n) * 100
+
+print("Clientes con valores menores al promedio:", clientes_menor)
+print("Porcentaje menor al promedio:", round(porcentaje, 2), "%")
