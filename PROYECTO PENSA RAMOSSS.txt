@@ -1,0 +1,387 @@
+
+# SISTEMA DE CONVERSION DE UNIDADES
+
+def menu_principal():
+    print("\n====== MENU PRINCIPAL ======")
+    print("1. Longitud")
+    print("2. Superficie")
+    print("3. Volumen")
+    print("4. Masa")
+    print("5. Salir")
+
+
+# ---------- LONGITUD ----------
+def submenu_longitud():
+    print("\n--- CONVERSION DE LONGITUD ---")
+    print("1. Metros")
+    print("2. Kilometros")
+    print("3. Pies")
+    print("4. Pulgadas")
+    print("5. Volver al menu principal")
+
+
+def convertir_longitud(valor, origen, destino):
+    # Pasar todo a metros
+    if origen == 1:
+        metros = valor
+    elif origen == 2:
+        metros = valor * 1000
+    elif origen == 3:
+        metros = valor * 0.3048
+    elif origen == 4:
+        metros = valor * 0.0254
+
+    # De metros a destino
+    if destino == 1:
+        return metros
+    elif destino == 2:
+        return metros / 1000
+    elif destino == 3:
+        return metros / 0.3048
+    elif destino == 4:
+        return metros / 0.0254
+
+
+# ---------- SUPERFICIE ----------
+def submenu_superficie():
+    print("\n--- CONVERSION DE SUPERFICIE ---")
+    print("1. Metros cuadrados")
+    print("2. Kilometros cuadrados")
+    print("3. Pies cuadrados")
+    print("4. Pulgadas cuadradas")
+    print("5. Volver al menu principal")
+
+
+def convertir_superficie(valor, origen, destino):
+    if origen == 1:
+        m2 = valor
+    elif origen == 2:
+        m2 = valor * 1_000_000
+    elif origen == 3:
+        m2 = valor * 0.092903
+    elif origen == 4:
+        m2 = valor * 0.00064516
+
+    if destino == 1:
+        return m2
+    elif destino == 2:
+        return m2 / 1_000_000
+    elif destino == 3:
+        return m2 / 0.092903
+    elif destino == 4:
+        return m2 / 0.00064516
+
+
+# ---------- VOLUMEN ----------
+def submenu_volumen():
+    print("\n--- CONVERSION DE VOLUMEN ---")
+    print("1. Metros cubicos")
+    print("2. Litros")
+    print("3. Pies cubicos")
+    print("4. Pulgadas cubicas")
+    print("5. Volver al menu principal")
+
+
+def convertir_volumen(valor, origen, destino):
+    if origen == 1:
+        m3 = valor
+    elif origen == 2:
+        m3 = valor / 1000
+    elif origen == 3:
+        m3 = valor * 0.0283168
+    elif origen == 4:
+        m3 = valor * 0.0000163871
+
+    if destino == 1:
+        return m3
+    elif destino == 2:
+        return m3 * 1000
+    elif destino == 3:
+        return m3 / 0.0283168
+    elif destino == 4:
+        return m3 / 0.0000163871
+
+
+# ---------- MASA ----------
+def submenu_masa():
+    print("\n--- CONVERSION DE MASA ---")
+    print("1. Kilogramos")
+    print("2. Gramos")
+    print("3. Libras")
+    print("4. Onzas")
+    print("5. Volver al menu principal")
+
+
+def convertir_masa(valor, origen, destino):
+    if origen == 1:
+        kg = valor
+    elif origen == 2:
+        kg = valor / 1000
+    elif origen == 3:
+        kg = valor * 0.453592
+    elif origen == 4:
+        kg = valor * 0.0283495
+
+    if destino == 1:
+        return kg
+    elif destino == 2:
+        return kg * 1000
+    elif destino == 3:
+        return kg / 0.453592
+    elif destino == 4:
+        return kg / 0.0283495
+
+
+# ---------- PROGRAMA PRINCIPAL ----------
+while True:
+    menu_principal()
+    opcion = input("Seleccione una opcion: ")
+
+    if opcion == "1":
+        while True:
+            submenu_longitud()
+            o = int(input("Unidad de origen: "))
+            if o == 5:
+                break
+            d = int(input("Unidad de destino: "))
+            valor = float(input("Ingrese el valor: "))
+            resultado = convertir_longitud(valor, o, d)
+            print("Resultado:", resultado)
+
+    elif opcion == "2":
+        while True:
+            submenu_superficie()
+            o = int(input("Unidad de origen: "))
+            if o == 5:
+                break
+            d = int(input("Unidad de destino: "))
+            valor = float(input("Ingrese el valor: "))
+            resultado = convertir_superficie(valor, o, d)
+            print("Resultado:", resultado)
+
+    elif opcion == "3":
+        while True:
+            submenu_volumen()
+            o = int(input("Unidad de origen: "))
+            if o == 5:
+                break
+            d = int(input("Unidad de destino: "))
+            valor = float(input("Ingrese el valor: "))
+            resultado = convertir_volumen(valor, o, d)
+            print("Resultado:", resultado)
+
+    elif opcion == "4":
+        while True:
+            submenu_masa()
+            o = int(input("Unidad de origen: "))
+            if o == 5:
+                break
+            d = int(input("Unidad de destino: "))
+            valor = float(input("Ingrese el valor: "))
+            resultado = convertir_masa(valor, o, d)
+            print("Resultado:", resultado)
+
+    elif opcion == "5":
+        print("Programa finalizado.")
+        break
+
+    else:
+        print("Opcion invalida, intente de nuevo.")
+
+
+
+
+
+
+
+CON VALORES YA INGRESADOS
+# ==============================
+# SISTEMA DE CONVERSION DE UNIDADES
+# ==============================
+
+def menu_principal():
+    print("\n====== MENU PRINCIPAL ======")
+    print("1. Longitud")
+    print("2. Superficie")
+    print("3. Volumen")
+    print("4. Masa")
+    print("5. Salir")
+
+
+# ---------- LONGITUD ----------
+def submenu_longitud():
+    print("\n--- CONVERSION DE LONGITUD ---")
+    print("1. Metros")
+    print("2. Kilometros")
+    print("3. Pies")
+    print("4. Pulgadas")
+    print("5. Volver al menu principal")
+
+
+def convertir_longitud(valor, origen, destino):
+    # Pasar todo a metros
+    if origen == 1:
+        metros = valor
+    elif origen == 2:
+        metros = valor * 1000
+    elif origen == 3:
+        metros = valor * 0.3048
+    elif origen == 4:
+        metros = valor * 0.0254
+
+    # De metros a destino
+    if destino == 1:
+        return metros
+    elif destino == 2:
+        return metros / 1000
+    elif destino == 3:
+        return metros / 0.3048
+    elif destino == 4:
+        return metros / 0.0254
+
+
+# ---------- SUPERFICIE ----------
+def submenu_superficie():
+    print("\n--- CONVERSION DE SUPERFICIE ---")
+    print("1. Metros cuadrados")
+    print("2. Kilometros cuadrados")
+    print("3. Pies cuadrados")
+    print("4. Pulgadas cuadradas")
+    print("5. Volver al menu principal")
+
+
+def convertir_superficie(valor, origen, destino):
+    if origen == 1:
+        m2 = valor
+    elif origen == 2:
+        m2 = valor * 1_000_000
+    elif origen == 3:
+        m2 = valor * 0.092903
+    elif origen == 4:
+        m2 = valor * 0.00064516
+
+    if destino == 1:
+        return m2
+    elif destino == 2:
+        return m2 / 1_000_000
+    elif destino == 3:
+        return m2 / 0.092903
+    elif destino == 4:
+        return m2 / 0.00064516
+
+
+# ---------- VOLUMEN ----------
+def submenu_volumen():
+    print("\n--- CONVERSION DE VOLUMEN ---")
+    print("1. Metros cubicos")
+    print("2. Litros")
+    print("3. Pies cubicos")
+    print("4. Pulgadas cubicas")
+    print("5. Volver al menu principal")
+
+
+def convertir_volumen(valor, origen, destino):
+    if origen == 1:
+        m3 = valor
+    elif origen == 2:
+        m3 = valor / 1000
+    elif origen == 3:
+        m3 = valor * 0.0283168
+    elif origen == 4:
+        m3 = valor * 0.0000163871
+
+    if destino == 1:
+        return m3
+    elif destino == 2:
+        return m3 * 1000
+    elif destino == 3:
+        return m3 / 0.0283168
+    elif destino == 4:
+        return m3 / 0.0000163871
+
+
+# ---------- MASA ----------
+def submenu_masa():
+    print("\n--- CONVERSION DE MASA ---")
+    print("1. Kilogramos")
+    print("2. Gramos")
+    print("3. Libras")
+    print("4. Onzas")
+    print("5. Volver al menu principal")
+
+
+def convertir_masa(valor, origen, destino):
+    if origen == 1:
+        kg = valor
+    elif origen == 2:
+        kg = valor / 1000
+    elif origen == 3:
+        kg = valor * 0.453592
+    elif origen == 4:
+        kg = valor * 0.0283495
+
+    if destino == 1:
+        return kg
+    elif destino == 2:
+        return kg * 1000
+    elif destino == 3:
+        return kg / 0.453592
+    elif destino == 4:
+        return kg / 0.0283495
+
+
+# ---------- PROGRAMA PRINCIPAL ----------
+while True:
+    menu_principal()
+    opcion = input("Seleccione una opcion: ")
+
+    if opcion == "1":
+        while True:
+            submenu_longitud()
+            o = int(input("Unidad de origen: "))
+            if o == 5:
+                break
+            d = int(input("Unidad de destino: "))
+            valor = float(input("Ingrese el valor: "))
+            resultado = convertir_longitud(valor, o, d)
+            print("Resultado:", resultado)
+
+    elif opcion == "2":
+        while True:
+            submenu_superficie()
+            o = int(input("Unidad de origen: "))
+            if o == 5:
+                break
+            d = int(input("Unidad de destino: "))
+            valor = float(input("Ingrese el valor: "))
+            resultado = convertir_superficie(valor, o, d)
+            print("Resultado:", resultado)
+
+    elif opcion == "3":
+        while True:
+            submenu_volumen()
+            o = int(input("Unidad de origen: "))
+            if o == 5:
+                break
+            d = int(input("Unidad de destino: "))
+            valor = float(input("Ingrese el valor: "))
+            resultado = convertir_volumen(valor, o, d)
+            print("Resultado:", resultado)
+
+    elif opcion == "4":
+        while True:
+            submenu_masa()
+            o = int(input("Unidad de origen: "))
+            if o == 5:
+                break
+            d = int(input("Unidad de destino: "))
+            valor = float(input("Ingrese el valor: "))
+            resultado = convertir_masa(valor, o, d)
+            print("Resultado:", resultado)
+
+    elif opcion == "5":
+        print("Programa finalizado.")
+        break
+
+    else:
+        print("Opcion invalida, intente de nuevo.")
