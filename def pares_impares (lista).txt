@@ -1,0 +1,30 @@
+def pares_impares (lista):
+    pares=0
+    impares=0
+    for i in lista:
+        if i%2==0:
+            pares=pares+1
+        else:
+            impares=impares+1
+    print(f"hay [{pares} pares, y {impares} impares")
+
+def positivo_negativo(lista):
+    posotivo=0
+    negativo=0
+    ceros=0
+    for i in lista:
+        if i >0:
+            positivo=positivos+1
+        elif<0:
+            negativos=negativos+1
+        else:
+            ceros=ceros+1
+        print(f"{positivo} positivos, {negativos}
+        negativos
+    
+n=int(input("ingresar tamaño de la lista:"))
+lisra=[]
+for i in range(n):
+    datos=int(input("ingrese datos:"))
+    lista.append(datos)
+pares_impares(lista)
