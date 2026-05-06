@@ -1,0 +1,52 @@
+matriz = [
+[4, 7, 2],
+[1, 9, 5],
+[6, 3, 8]
+]
+
+suma_filas = [0, 0, 0]
+suma_columnas = [0, 0, 0]
+
+for i in range(3):
+    for j in range(3):
+        suma_filas[i] += matriz[i][j]
+        suma_columnas[j] += matriz[i][j]
+
+print("Matriz:")
+for fila in matriz:
+    print(fila)
+
+print("\nSuma de las filas:", suma_filas)
+print("Suma de las columnas:", suma_columnas)
+
+# Cuadrado mágico 3x3
+
+cuadrado = [
+[8, 1, 6],
+[3, 5, 7],
+[4, 9, 2]
+]
+
+print("Suma de filas:")
+for i in range(3):
+    suma_fila = sum(cuadrado[i])
+    print(f"Fila {i+1}: {suma_fila}")
+
+print("\nSuma de columnas:")
+for j in range(3):
+    suma_columna = cuadrado[0][j] + cuadrado[1][j] + cuadrado[2][j]
+    print(f"Columna {j+1}: {suma_columna}")
+
+diag1 = cuadrado[0][0] + cuadrado[1][1] + cuadrado[2][2]
+diag2 = cuadrado[0][2] + cuadrado[1][1] + cuadrado[2][0]
+
+print("\nSuma de diagonales:")
+print("Diagonal 1:", diag1)
+print("Diagonal 2:", diag2)
+
+if (diag1 == 15 and diag2 == 15 and
+all(sum(fila) == 15 for fila in cuadrado) and
+all(cuadrado[0][j] + cuadrado[1][j] + cuadrado[2][j] == 15 for j in range(3))):
+    print("\nEs un cuadrado mágico ✔️")
+else:
+    print("\nNo es un cuadrado mágico ❌")
