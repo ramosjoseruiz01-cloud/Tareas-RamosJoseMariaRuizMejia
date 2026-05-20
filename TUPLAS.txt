@@ -1,0 +1,56 @@
+print("=== TUPLA ===")
+n1 = int(input("Ingrese el primer número: "))
+n2 = int(input("Ingrese el segundo número: "))
+n3 = int(input("Ingrese el tercer número: "))
+
+tupla = (n1, n2, n3)
+print("Tupla creada:", tupla)
+
+
+# ---------------- DICCIONARIO ----------------
+print("\n=== DICCIONARIO ===")
+
+marca = input("Ingrese la marca del vehículo: ")
+modelo = input("Ingrese el modelo del vehículo: ")
+anio = int(input("Ingrese el año del vehículo: "))
+
+diccionario = {
+"marca": marca,
+"modelo": modelo,
+"año": anio
+}
+
+print("\nDiccionario inicial:")
+print(diccionario)
+
+
+# -------- INSERTAR DATO --------
+print("\n--- Insertar dato ---")
+color = input("Ingrese el color del vehículo: ")
+diccionario["color"] = color
+
+print("Diccionario después de insertar 'color':")
+print(diccionario)
+
+
+# -------- MODIFICAR DATO --------
+print("\n--- Modificar dato ---")
+nuevo_modelo = input("Ingrese el nuevo modelo del vehículo: ")
+diccionario["modelo"] = nuevo_modelo
+
+print("Diccionario después de modificar 'modelo':")
+print(diccionario)
+
+
+# -------- ELIMINAR DATO --------
+print("\n--- Eliminar dato ---")
+eliminar_clave = input("¿Qué dato desea eliminar? (marca, modelo, año, color): ")
+
+if eliminar_clave in diccionario:
+del diccionario[eliminar_clave]
+print(f"Se eliminó '{eliminar_clave}' correctamente.")
+else:
+print("La clave no existe en el diccionario.")
+
+print("\nDiccionario final:")
+print(diccionario)
